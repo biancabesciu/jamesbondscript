@@ -1,3 +1,17 @@
 body {
-  font-family: sans-serif;
-}
+  background-color: navajowhite; }
+body {
+  background-color: navajowhite; }
+body {
+  background-color: navajowhite; }
+
+.table-bordered {
+  border: 1px solid black; }
+body {
+  background-color: navajowhite; }
+  body .table-bordered {
+    border: 1px solid black; }
+body {
+  background-color: navajowhite; }
+  body .table-bordered td {
+    border: 1px solid black; }
