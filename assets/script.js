@@ -1,8 +1,8 @@
 function init() {
 
-
+    const currentYear = new Date().getFullYear();
     //creating the table
-    for (i = 0; i < bondFilms.length; i++) {
+    for (let i = 0; i < bondFilms.length; i++) {
 
         let backgroundColor;
         let actorName = bondFilms[i].actor;
@@ -20,13 +20,7 @@ function init() {
         }
 
         let years = bondFilms[i].year;
-        let yearsAgo = 2017 - years;
-
-        if (years) {
-            yearsAgo = ' made ' + yearsAgo + ' years ago';
-        }
-
-
+        let yearsAgo = ' made ' + (currentYear - years) + ' years ago';
 
         let table =
             '<tr class="change-color" style ="background-color: ' + backgroundColor + '">' +
@@ -35,7 +29,6 @@ function init() {
             '<td class="year">'+ bondFilms[i].year + yearsAgo +'</td>' +
             '<td class="actor">'+ bondFilms[i].actor +'</td>' +
             '</tr>';
-
 
         document.getElementById('tableBody').insertAdjacentHTML('beforeend', table);
     }
